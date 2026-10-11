@@ -15,7 +15,7 @@ CATEGORY = os.environ.get("KAIZEN_CATEGORY", "metal_nut")
 IMAGE_SIZE = 256
 
 # PatchCore memory bank: keep this share of all "good" patches (coreset).
-CORESET_RATIO = 0.10
+CORESET_RATIO = 0.01
 
 # Smoothing of the anomaly map (pixels), as in the PatchCore paper.
 HEATMAP_SIGMA = 4

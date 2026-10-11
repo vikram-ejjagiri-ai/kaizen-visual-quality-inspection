@@ -1,0 +1,108 @@
+{
+  "category": "metal_nut",
+  "run_date": "2026-10-11",
+  "smoke_test": false,
+  "device": "cpu",
+  "image_size": 256,
+  "coreset_ratio": 0.01,
+  "calibration_share": 0.5,
+  "costs": {
+    "missed_defect": 20,
+    "false_reject": 1
+  },
+  "data": {
+    "train_good": 220,
+    "test_good": 22,
+    "test_defective": 93,
+    "per_type": [
+      {
+        "defect_type": "bent",
+        "test_images": 25,
+        "masks_found": 25
+      },
+      {
+        "defect_type": "color",
+        "test_images": 22,
+        "masks_found": 22
+      },
+      {
+        "defect_type": "flip",
+        "test_images": 23,
+        "masks_found": 23
+      },
+      {
+        "defect_type": "good",
+        "test_images": 22,
+        "masks_found": 0
+      },
+      {
+        "defect_type": "scratch",
+        "test_images": 23,
+        "masks_found": 23
+      }
+    ]
+  },
+  "memory_bank_size": 2253,
+  "patchcore": {
+    "image_auroc": 0.9995112414467253,
+    "pixel_auroc": 0.9885054572303962
+  },
+  "baseline": {
+    "image_auroc": 0.8284457478005864
+  },
+  "threshold": 2.3231289386749268,
+  "calibration": {
+    "threshold": 2.3231289386749268,
+    "defects_caught": 46,
+    "defects_missed": 0,
+    "good_passed": 11,
+    "good_rejected": 0,
+    "defect_detection_rate": 1.0,
+    "false_reject_rate": 0.0,
+    "business_cost": 0,
+    "n_images": 57
+  },
+  "evaluation_half": {
+    "threshold": 2.3231289386749268,
+    "defects_caught": 46,
+    "defects_missed": 1,
+    "good_passed": 11,
+    "good_rejected": 0,
+    "defect_detection_rate": 0.9787234042553191,
+    "false_reject_rate": 0.0,
+    "business_cost": 20,
+    "n_images": 58
+  },
+  "detection_by_type": [
+    {
+      "defect_type": "bent",
+      "count": 13,
+      "caught": 13,
+      "detection_rate": 1.0
+    },
+    {
+      "defect_type": "color",
+      "count": 11,
+      "caught": 11,
+      "detection_rate": 1.0
+    },
+    {
+      "defect_type": "flip",
+      "count": 11,
+      "caught": 11,
+      "detection_rate": 1.0
+    },
+    {
+      "defect_type": "scratch",
+      "count": 12,
+      "caught": 11,
+      "detection_rate": 0.9166666666666666
+    }
+  ],
+  "latency_ms": {
+    "PyTorch, CPU": 118.65210000541992,
+    "ONNX Runtime, CPU": 139.48480000544805
+  },
+  "onnx_max_diff": 5.960464477539062e-07,
+  "runtime_minutes": 3.4
+}
