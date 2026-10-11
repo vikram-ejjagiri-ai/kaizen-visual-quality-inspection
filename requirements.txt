@@ -1,0 +1,13 @@
+# Install PyTorch with GPU support FIRST (see README, step 1), then:
+#   python -m pip install -r requirements.txt
+numpy>=1.26
+pandas>=2.2
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+pillow>=10.0
+onnx>=1.16
+onnxscript>=0.1
+onnxruntime>=1.18
+streamlit>=1.50
+pytest>=8.0

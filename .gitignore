@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Dataset (download separately, see README)
+data/
+
+# Trained models (recreate with: python -m src.pipeline)
+models/*.pt
+models/*.onnx
+models/*.onnx.data
+
+# Operator decisions are local
+reports/review_log.csv
